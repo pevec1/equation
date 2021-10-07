@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1 class="title">Работа с событиями (JS)</h1>
+
+	<form name="formEquation" class="form-equation">
+		<fieldset class="settings">
+			<legend class="title">Настройки страницы</legend>
+
+			<div class="form-group">
+				<label for="page_bgcolor">Цвет фона: </label>
+				<input id="page_bgcolor" type="color" value="#ffffff">
+			</div>
+
+			<div class="form-group">
+				<label for="page_imglink">Укажите ссылку на картинку: </label>
+				<input class="url" id="page_imglink" type="text">
+
+				<select name="bgPhoto" id="bgPhoto">
+					<option value="nature">Природа</option>
+					<option value="pattern">Узор</option>
+					<option value="abstract">Абстракция</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<input id="bgSize_default" name="bgSize" type="radio">
+				<label for="bgSize_default">Обычный</label>
+
+				<input id="bgSize_zoom" name="bgSize" type="radio">
+				<label for="bgSize_zoom">Масштабирование</label>
+
+				<input id="bgSize_mosaic" name="bgSize" type="radio" checked>
+				<label for="bgSize_mosaic">Мозаика</label>
+			</div>
+
+		</fieldset>
+		<fieldset class="parametrs">
+			<legend class="title">Параметры уравнения</legend>
+
+			<div>
+				<input class="params" id="param_a" type="number" placeholder="Коэф. a">
+				<input class="params" id="param_b" type="number" placeholder="Коэф. b" disabled>
+				<input class="params" id="param_c" type="number" placeholder="Коэф. c" disabled>
+			</div>
+
+			<input class="range" type="range" id="range_a" min="-100" value="0" max="100">
+			<input class="range" type="range" id="range_b" min="-100" value="0" max="100" disabled>
+			<input class="range" type="range" id="range_c" min="-100" value="0" max="100" disabled>
+
+			<div class="buttons">
+				<input class="btn btn-calc" id="btn_calc" type="button" value="Произвести расчёт" disabled>
+				<input class="btn btn-reset" id="btn_reset" type="reset" value="Очистить" disabled>
+				<input class="btn btn-play" id="btn_play" type="button" value="Показать плеер">
+			</div>
+		</fieldset>
+	</form>
+
+	<script src="js/script.js" async></script>
+</body>
+
+</html>
